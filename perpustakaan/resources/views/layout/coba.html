@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test QR Code</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://davidshimjs.github.io/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+
+<button onclick="showQRCode()">Tampilkan QR Code</button>
+<div id="qrcode" style="margin-top: 20px; display: block; width: 128px; height: 128px; border: 1px solid #000;"></div>
+
+<script>
+function showQRCode() {
+    document.getElementById("qrcode").innerHTML = ""; // Kosongkan elemen
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "https://example.com", // Ganti dengan URL atau teks yang valid
+        width: 128,
+        height: 128,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+    console.log("QR Code telah dibuat.");
+}
+</script>
+
+</body>
+</html>

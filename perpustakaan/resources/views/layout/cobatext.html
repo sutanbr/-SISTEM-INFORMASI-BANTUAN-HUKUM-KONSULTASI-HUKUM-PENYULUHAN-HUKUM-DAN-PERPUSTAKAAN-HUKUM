@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curve Definition</title>
+    <style>
+        /* Container styling for the question */
+        .faq-container {
+            width: 50%;
+            margin: 20px auto;
+            padding: 15px;
+            border: 0px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Question section with arrow icon */
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 10px 0;
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        /* Arrow style (can be rotated for toggle) */
+        .faq-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        /* Rotates the arrow when active */
+        .faq-arrow.rotate {
+            transform: rotate(180deg);
+        }
+
+        /* Answer content, initially hidden */
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .faq-answer p {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="faq-container">
+        <!-- Question with clickable area and arrow -->
+        <div class="faq-question" id="faqQuestion">
+            <h3>Apa yang dimaksud dengan kurvass?</h3>
+            <!-- Arrow Icon -->
+            <span class="faq-arrow" id="faqArrow">▼</span>
+        </div>
+
+        <!-- Answer section (initially hidden) -->
+        <div class="faq-answer" id="faqAnswer">
+            <p>Dalam matematika, kurva atau lengkung adalah objek yang mirip dengan garis yang tidak harus lurus. Kurva parabola merupakan salah satu kurva yang paling sederhana. Secara intuitif, kurva dapat dipandang sebagai jejak yang ditinggalkan oleh titik bergerak.</p>
+        </div>
+    </div>
+    <div class="faq-container">
+        <!-- Question with clickable area and arrow -->
+        <div class="faq-question" id="faqQuestion">
+            <h3>Apa yang dimaksud dengan kurvass?</h3>
+            <!-- Arrow Icon -->
+            <span class="faq-arrow" id="faqArrow">▼</span>
+        </div>
+
+        <!-- Answer section (initially hidden) -->
+        <div class="faq-answer" id="faqAnswer">
+            <p>Dalam matematika, kurva atau lengkung adalah objek yang mirip dengan garis yang tidak harus lurus. Kurva parabola merupakan salah satu kurva yang paling sederhana. Secara intuitif, kurva dapat dipandang sebagai jejak yang ditinggalkan oleh titik bergerak.</p>
+        </div>
+    </div>
+    <div class="faq-container">
+        <!-- Question with clickable area and arrow -->
+        <div class="faq-question" id="faqQuestion">
+            <h3>Apa yang dimaksud dengan kurvass?</h3>
+            <!-- Arrow Icon -->
+            <span class="faq-arrow" id="faqArrow">▼</span>
+        </div>
+
+        <!-- Answer section (initially hidden) -->
+        <div class="faq-answer" id="faqAnswer">
+            <p>Dalam matematika, kurva atau lengkung adalah objek yang mirip dengan garis yang tidak harus lurus. Kurva parabola merupakan salah satu kurva yang paling sederhana. Secara intuitif, kurva dapat dipandang sebagai jejak yang ditinggalkan oleh titik bergerak.</p>
+        </div>
+    </div>
+
+    <!-- jQuery (Optional for easy DOM manipulation) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // When the question is clicked
+            $('#faqQuestion').on('click', function() {
+                // Toggle the answer visibility
+                $('#faqAnswer').slideToggle();
+                // Rotate the arrow
+                $('#faqArrow').toggleClass('rotate');
+            });
+        });
+    </script>
+
+</body>
+</html>
